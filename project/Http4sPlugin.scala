@@ -293,6 +293,8 @@ object Http4sPlugin extends AutoPlugin {
   lazy val mockito                          = "org.mockito"            %  "mockito-core"              % "3.1.0"
   lazy val okhttp                           = "com.squareup.okhttp3"   %  "okhttp"                    % "4.2.1"
   lazy val playJson                         = "com.typesafe.play"      %% "play-json"                 % "2.7.4"
+  lazy val finagle                          = "com.twitter"            %% "finagle-http"              % "19.10.0"
+  lazy val catsEffectTwitterInterop         = "com.github.yaroot.cats-effect-interop-twitter"      %% "cats-effect-interop-twitter" % "0.1.6"
   lazy val prometheusClient                 = "io.prometheus"          %  "simpleclient"              % "0.7.0"
   lazy val prometheusCommon                 = "io.prometheus"          %  "simpleclient_common"       % prometheusClient.revision
   lazy val prometheusHotspot                = "io.prometheus"          %  "simpleclient_hotspot"      % prometheusClient.revision

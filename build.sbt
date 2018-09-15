@@ -275,6 +275,18 @@ lazy val tomcat = libraryProject("tomcat")
   )
   .dependsOn(servlet % "compile;test->test")
 
+lazy val finalge = libraryProject("finagle")
+  .settings(
+    description := "finagle implementation for http4s clients and servers",
+    resolvers += "jitpack" at "https://jitpack.io",
+    libraryDependencies ++= Seq(
+      Http4sPlugin.finagle,
+      Http4sPlugin.catsEffectTwitterInterop
+    ),
+    mimaPreviousArtifacts := Set.empty
+  )
+  .dependsOn(core, testing % "test->test", client % "compile;test->test", server % "compile;test->test")
+
 // `dsl` name conflicts with modern SBT
 lazy val theDsl = libraryProject("dsl")
   .settings(
